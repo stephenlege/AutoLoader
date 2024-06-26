@@ -1,0 +1,106 @@
+# AutoTyper
+
+AutoTyper is a Python script that types random sentences into the currently active window cursor is (terminal or slack for instance) at regular intervals. This project uses a virtual environment to manage dependencies.
+
+## Features
+
+- Types random sentences every 3 minutes.
+- Uses `pyautogui` for simulating keyboard input.
+- Generates sentences using the NLTK library.
+
+## Requirements
+
+- Python 3.x
+- Virtual environment (venv)
+- `pyautogui` library
+- `nltk` library
+
+## Installation
+
+1. **Clone the repository or download the files** to your local machine.
+
+2. **Navigate to the project directory**:
+
+    ```bash
+    cd path/to/AutoTyper
+    ```
+
+3. **Create a virtual environment**:
+
+    ```bash
+    python3 -m venv myenv
+    ```
+
+4. **Activate the virtual environment**:
+
+    - On macOS/Linux:
+      ```bash
+      source myenv/bin/activate
+      ```
+    - On Windows:
+      ```cmd
+      myenv\Scripts\activate
+      ```
+
+5. **Upgrade `pip` and install the required packages**:
+
+    ```bash
+    python -m pip install --upgrade pip
+    python -m pip install -r requirements.txt
+    ```
+
+6. **Download the necessary NLTK data** (this will be done automatically when you run the script for the first time):
+
+    ```python
+    import nltk
+    nltk.download('brown')
+    nltk.download('punkt')
+    ```
+
+## Usage
+
+1. **Ensure the virtual environment is activated**:
+
+    - On macOS/Linux:
+      ```bash
+      source myenv/bin/activate
+      ```
+    - On Windows:
+      ```cmd
+      myenv\Scripts\activate
+      ```
+
+2. **Run the script**:
+
+    ```bash
+    python3 words.py
+    ```
+
+3. **Optional**: You can use the provided shell script to automate the process:
+
+    - Make the shell script executable:
+      ```bash
+      chmod +x run_script.sh
+      ```
+
+    - Run the shell script:
+      ```bash
+      ./run_script.sh
+      ```
+
+## Files
+
+- `words.py`: The main Python script that types random sentences.
+- `requirements.txt`: Lists the Python packages required for the project.
+- `run_script.sh`: A shell script to automate the activation of the virtual environment and execution of the Python script.
+
+## License
+
+This project is licensed under the MIT License.
+
+## Acknowledgements
+
+- [pyautogui](https://pypi.org/project/pyautogui/) - A cross-platform GUI automation Python module.
+- [nltk](https://www.nltk.org/) - The Natural Language Toolkit.
+
+
